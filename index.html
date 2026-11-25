@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airbnb Madrid · Portfolio de análisis de datos</title>
+  <meta name="description" content="Proyecto educativo de análisis de datos sobre alojamientos en Madrid: de SQL a Power BI.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#inicio">🏠 Airbnb Madrid</a>
+    <nav aria-label="Secciones">
+      <a href="#proyecto">Proyecto</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#modelo">Modelo</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#avance">Avance</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <p class="tag">Portfolio · Análisis de datos</p>
+        <h1>¿Dónde conviene invertir en alojamiento turístico en Madrid?</h1>
+        <p class="lead">Un proyecto de principio a fin que arranca en <strong>SQL</strong> y termina en <strong>Power BI</strong>.</p>
+        <p class="actions">
+          <a class="btn primary" href="#proceso">Ver el proceso</a>
+          <a class="btn" href="https://github.com/IgnacioArga/Airbnb">Código en GitHub</a>
+        </p>
+        <ul class="chips" aria-label="Herramientas">
+          <li>SQL Server</li><li>T-SQL</li><li>Modelo estrella</li><li>DAX</li><li>Power BI</li>
+        </ul>
+      </div>
+      <img src="assets/banner.svg" alt="Ilustración de edificios de Madrid con el recorrido de SQL a Power BI" width="1200" height="360">
+    </section>
+
+    <section id="proyecto">
+      <h2>🎯 El proyecto</h2>
+      <p>Una gestora ficticia de alojamientos turísticos, <strong>Llave Maestra</strong>, quiere invertir en Madrid. Antes de comprar o alquilar necesita saber <strong>dónde</strong>, <strong>qué tipo de alojamiento</strong> y <strong>a qué precio</strong> publicar.</p>
+      <div class="grid">
+        <article class="card"><span>📍</span><h3>Precios</h3><p>¿Qué distritos tienen los precios más altos?</p></article>
+        <article class="card"><span>📅</span><h3>Demanda</h3><p>¿Cómo cambia la ocupación estimada a lo largo del año?</p></article>
+        <article class="card"><span>🛏️</span><h3>Ingresos</h3><p>¿Qué tipo de alojamiento genera más ingresos estimados?</p></article>
+        <article class="card"><span>⭐</span><h3>Valoraciones</h3><p>¿Influyen las puntuaciones en el precio?</p></article>
+        <article class="card"><span>🧑‍💼</span><h3>Anfitriones</h3><p>¿Cuánto pesan quienes gestionan varias propiedades?</p></article>
+        <article class="card"><span>🗂️</span><h3>Datos</h3><p>Fuente prevista: datos abiertos de <a href="https://insideairbnb.com/get-the-data/">Inside Airbnb</a>.</p></article>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <h2>🔄 El proceso</h2>
+      <ol class="steps">
+        <li><h3>📥 Ingesta</h3><p>Carga de los CSV en tablas <em>staging</em> de SQL Server.</p></li>
+        <li><h3>🧹 Limpieza</h3><p>Tipos de datos, nulos, duplicados y valores atípicos.</p></li>
+        <li><h3>🔍 Exploración</h3><p>Consultas con <em>joins</em>, CTEs y funciones de ventana.</p></li>
+        <li><h3>🏗️ Modelado</h3><p>Vistas organizadas en un modelo estrella.</p></li>
+        <li><h3>📊 Visualización</h3><p>Medidas DAX y dashboard interactivo en Power BI.</p></li>
+      </ol>
+      <h3>Ejemplo de consulta prevista</h3>
+<pre><code>-- Ranking de distritos por precio medio
+SELECT
+    district,
+    COUNT(*)                               AS total_listings,
+    AVG(price)                             AS avg_price,
+    RANK() OVER (ORDER BY AVG(price) DESC) AS price_rank
+FROM clean.listings
+WHERE price &gt; 0
+GROUP BY district;</code></pre>
+    </section>
+
+    <section id="modelo">
+      <h2>⭐ Modelo de datos</h2>
+      <p>Una tabla de hechos con la disponibilidad y el precio diario, rodeada de cuatro dimensiones.</p>
+      <div class="star">
+        <div class="table d1"><h3>DIM_LISTING</h3><p>listing_key<br>room_type<br>accommodates</p></div>
+        <div class="table d2"><h3>DIM_DATE</h3><p>date_key<br>full_date<br>month_name</p></div>
+        <div class="table fact"><h3>FACT_CALENDAR</h3><p>listing_key<br>date_key<br>host_key<br>neighbourhood_key<br>price<br>is_available</p></div>
+        <div class="table d3"><h3>DIM_HOST</h3><p>host_key<br>host_name<br>is_superhost</p></div>
+        <div class="table d4"><h3>DIM_NEIGHBOURHOOD</h3><p>neighbourhood_key<br>neighbourhood<br>district</p></div>
+      </div>
+    </section>
+
+    <section id="dashboard">
+      <h2>📊 Dashboard</h2>
+      <figure>
+        <div class="scroll"><img src="assets/dashboard.svg" alt="Boceto del dashboard con indicadores, precio por distrito y ocupación mensual, todo con datos ficticios" width="1200" height="600" loading="lazy"></div>
+        <figcaption>🖌️ Boceto con <strong>cifras inventadas</strong>: todavía no es un resultado del análisis.</figcaption>
+      </figure>
+    </section>
+
+    <section id="avance">
+      <h2>🗺️ Estado del proyecto</h2>
+      <ul class="roadmap">
+        <li class="done">✅ Definir el proyecto</li>
+        <li>⬜ Descargar los datos y cargarlos en SQL Server</li>
+        <li>⬜ Limpiar y validar</li>
+        <li>⬜ Analizar con SQL</li>
+        <li>⬜ Construir el modelo estrella</li>
+        <li>⬜ Crear el dashboard en Power BI</li>
+        <li>⬜ Publicar conclusiones y recomendaciones</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto de <a href="https://github.com/IgnacioArga">Ignacio Argañaraz</a>.</p>
+    <p>Proyecto educativo, no afiliado a Airbnb.</p>
+  </footer>
+</body>
+</html>

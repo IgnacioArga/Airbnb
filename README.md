@@ -13,6 +13,10 @@
 > 🎓 Proyecto educativo de análisis de datos de principio a fin: **arranca en SQL y termina en Power BI**.
 > No está afiliado a Airbnb.
 
+<p align="center">
+  🌐 <a href="https://ignacioarga.github.io/Airbnb/"><strong>Ver la página del proyecto</strong></a>
+</p>
+
 ---
 
 ## 📑 Índice
