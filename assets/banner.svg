@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Airbnb Madrid: análisis de datos de SQL a Power BI">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14213D"/>
+      <stop offset="1" stop-color="#7A2048"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="20" fill="url(#sky)"/>
+  <circle cx="1050" cy="80" r="42" fill="#FFD166"/>
+  <!-- ciudad -->
+  <g fill="#FF5A5F">
+    <path d="M700 330V220l55-45 55 45v110z"/>
+    <path d="M945 330V190l60-50 60 50v140z"/>
+  </g>
+  <g fill="#FF8A8D">
+    <path d="M820 330V150h110v180z"/>
+    <path d="M1075 330V235l40-32 40 32v95z"/>
+  </g>
+  <g fill="#FFF3D6">
+    <path d="M738 250h14v18h-14zM760 250h14v18h-14zM845 175h18v22h-18zM887 175h18v22h-18zM845 220h18v22h-18zM887 220h18v22h-18zM845 265h18v22h-18zM887 265h18v22h-18zM975 220h18v22h-18zM1017 220h18v22h-18zM975 265h18v22h-18zM1017 265h18v22h-18zM1105 255h20v20h-20z"/>
+  </g>
+  <rect y="328" width="1200" height="4" fill="#FFFFFF" opacity="0.35"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" fill="#FFFFFF">
+    <text x="64" y="130" font-size="58" font-weight="700">Airbnb Madrid</text>
+    <text x="64" y="185" font-size="30">Proyecto de análisis de datos</text>
+    <rect x="64" y="220" width="110" height="44" rx="22" fill="#FFFFFF"/>
+    <text x="119" y="250" font-size="20" font-weight="700" fill="#14213D" text-anchor="middle">SQL</text>
+    <text x="200" y="251" font-size="26" text-anchor="middle">→</text>
+    <rect x="226" y="220" width="160" height="44" rx="22" fill="#F2C811"/>
+    <text x="306" y="250" font-size="20" font-weight="700" fill="#14213D" text-anchor="middle">Power BI</text>
+  </g>
+</svg>

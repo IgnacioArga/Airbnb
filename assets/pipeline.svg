@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Flujo: CSV, staging en SQL, limpieza, modelo estrella y Power BI">
+  <rect width="1200" height="240" rx="16" fill="#F7F7FA"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <g fill="#FFFFFF" stroke-width="3">
+      <rect x="30" y="50" width="180" height="140" rx="14" stroke="#767676"/>
+      <rect x="270" y="50" width="180" height="140" rx="14" stroke="#CC2936"/>
+      <rect x="510" y="50" width="180" height="140" rx="14" stroke="#CC2936"/>
+      <rect x="750" y="50" width="180" height="140" rx="14" stroke="#CC2936"/>
+      <rect x="990" y="50" width="180" height="140" rx="14" stroke="#C79F00"/>
+    </g>
+    <g font-size="22" font-weight="700" fill="#14213D">
+      <text x="120" y="120">Archivos CSV</text>
+      <text x="360" y="120">Staging</text>
+      <text x="600" y="120">Limpieza</text>
+      <text x="840" y="120">Modelo estrella</text>
+      <text x="1080" y="120">Power BI</text>
+    </g>
+    <g font-size="16" fill="#555555">
+      <text x="120" y="150">Datos crudos</text>
+      <text x="360" y="150">Carga en SQL</text>
+      <text x="600" y="150">Tipos y nulos</text>
+      <text x="840" y="150">Hechos y dimensiones</text>
+      <text x="1080" y="150">Dashboard</text>
+    </g>
+    <g font-size="34" fill="#14213D">
+      <text x="240" y="131">→</text>
+      <text x="480" y="131">→</text>
+      <text x="720" y="131">→</text>
+      <text x="960" y="131">→</text>
+    </g>
+  </g>
+</svg>

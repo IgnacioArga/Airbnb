@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="Boceto del dashboard con datos ficticios">
+  <rect width="1200" height="600" rx="16" fill="#EEF0F4"/>
+  <rect x="24" y="20" width="1152" height="60" rx="10" fill="#14213D"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="48" y="59" font-size="24" font-weight="700" fill="#FFFFFF">Resumen del mercado</text>
+    <text x="1152" y="58" font-size="16" fill="#F2C811" text-anchor="end">BOCETO · datos ficticios</text>
+    <g fill="#FFFFFF">
+      <rect x="24" y="100" width="270" height="110" rx="10"/>
+      <rect x="318" y="100" width="270" height="110" rx="10"/>
+      <rect x="612" y="100" width="270" height="110" rx="10"/>
+      <rect x="906" y="100" width="270" height="110" rx="10"/>
+      <rect x="24" y="230" width="564" height="346" rx="10"/>
+      <rect x="612" y="230" width="564" height="346" rx="10"/>
+    </g>
+    <g font-size="16" fill="#555555">
+      <text x="48" y="134">Alojamientos activos</text>
+      <text x="342" y="134">Precio medio por noche</text>
+      <text x="636" y="134">Ocupación estimada</text>
+      <text x="930" y="134">Valoración media</text>
+    </g>
+    <g font-size="40" font-weight="700" fill="#CC2936">
+      <text x="48" y="186">21.480</text>
+      <text x="342" y="186">112 €</text>
+      <text x="636" y="186">64 %</text>
+      <text x="930" y="186">4,6 / 5</text>
+    </g>
+    <g font-size="18" font-weight="700" fill="#14213D">
+      <text x="48" y="266">Precio medio por distrito (€)</text>
+      <text x="636" y="266">Ocupación mensual (%)</text>
+    </g>
+    <g font-size="15" fill="#333333">
+      <text x="48" y="315">Salamanca</text>
+      <text x="48" y="365">Centro</text>
+      <text x="48" y="415">Chamberí</text>
+      <text x="48" y="465">Retiro</text>
+      <text x="48" y="515">Carabanchel</text>
+      <text x="530" y="315">148</text>
+      <text x="496" y="365">134</text>
+      <text x="464" y="415">121</text>
+      <text x="435" y="465">109</text>
+      <text x="335" y="515">68</text>
+    </g>
+    <g fill="#CC2936">
+      <rect x="160" y="298" width="360" height="24" rx="4"/>
+      <rect x="160" y="348" width="326" height="24" rx="4"/>
+      <rect x="160" y="398" width="294" height="24" rx="4"/>
+      <rect x="160" y="448" width="265" height="24" rx="4"/>
+      <rect x="160" y="498" width="165" height="24" rx="4"/>
+    </g>
+    <path d="M650 510H1140" stroke="#CCCCCC" stroke-width="2"/>
+    <polyline fill="none" stroke="#14213D" stroke-width="4" points="660,380 703,367.5 746,340 789,330 832,327.5 875,345 918,372.5 961,387.5 1004,332.5 1047,322.5 1090,350 1133,355"/>
+    <g font-size="14" fill="#555555" text-anchor="middle">
+      <text x="660" y="535">E</text><text x="703" y="535">F</text><text x="746" y="535">M</text><text x="789" y="535">A</text><text x="832" y="535">M</text><text x="875" y="535">J</text><text x="918" y="535">J</text><text x="961" y="535">A</text><text x="1004" y="535">S</text><text x="1047" y="535">O</text><text x="1090" y="535">N</text><text x="1133" y="535">D</text>
+    </g>
+    <g font-size="14" fill="#14213D" text-anchor="middle">
+      <text x="660" y="362">52</text><text x="832" y="310">73</text><text x="961" y="412">49</text><text x="1047" y="305">75</text><text x="1133" y="337">62</text>
+    </g>
+  </g>
+</svg>
